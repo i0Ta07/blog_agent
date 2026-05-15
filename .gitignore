@@ -13,4 +13,4 @@ wheels/
 .env
 
 # Test blogs
-test_blogs
+test_blogs/
