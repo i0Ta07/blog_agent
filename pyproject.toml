@@ -14,5 +14,6 @@ dependencies = [
     "langgraph-checkpoint-postgres>=3.0.5",
     "openai>=2.33.0",
     "pydantic>=2.13.3",
+    "pypdf>=6.11.0",
     "python-dotenv>=1.2.2",
 ]

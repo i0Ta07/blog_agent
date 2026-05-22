@@ -250,36 +250,22 @@ Selection Rules:
 - Prefer authoritative and primary sources whenever possible.
 
 Strongly Preferred Sources:
-- official documentation,
-- vendor/company engineering blogs,
-- RFCs/specifications,
-- research papers,
-- release notes,
-- changelogs,
-- standards organizations,
-- trusted technical publications,
-- and original creator content.
+- official documentation, vendor/company engineering blogs
+- RFCs/specifications, research papers,
+- release notes, standards organizations,
+- trusted technical publications and original creator content.
 
 Avoid or deprioritize:
-- SEO-driven articles,
-- AI-generated spam,
-- low-authority blogs,
-- affiliate sites,
-- generic tutorials,
-- shallow summaries,
-- duplicated content,
-- clickbait headlines,
-- or unverifiable technical claims.
+- SEO-driven articles, AI-generated spam,
+- low-authority blogs, affiliate sites,
+- generic tutorials, shallow summaries, duplicated content,
+- clickbait headlines or unverifiable technical claims.
 
 Content Requirements:
 - Preserve content that contains:
-  - implementation details,
-  - production guidance,
-  - technical tradeoffs,
-  - benchmarks,
-  - architecture insights,
-  - API behavior,
-  - configuration details,
+  - implementation details, production guidance,
+  - technical tradeoffs, benchmarks, architecture insights,
+  - API behavior, configuration details,
   - migration concerns,
   - limitations,
   - version-specific information,
