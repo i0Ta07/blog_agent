@@ -2,6 +2,10 @@
 
 An AI-powered blog generation system built with **LangGraph** that takes a topic and produces a fully written, research-backed Markdown blog post — complete with optional AI-generated images.
 
+## Demo
+
+[![Blog Agent using LangGraph](https://thumbs.video-to-markdown.com/8c530ddf.jpg)](https://youtu.be/DwI6HQjvLcc)
+
 ## Architecture
 
 Blog Agent is structured around independent subgraphs, each with a single responsibility and clean I/O boundaries — much like microservices. The two subgraphs (Research, Reducer) can be reasoned about, tested, and extended in isolation. The main graph simply wires them together via shared state.

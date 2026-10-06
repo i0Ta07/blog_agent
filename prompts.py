@@ -2,7 +2,7 @@ CREATE_PLACEHOLDERS = """
 You are a senior technical editor specializing in developer-focused educational content.
 
 Your task:
-Analyze the provided markdown blog/article and determine whether technical visuals are necessary to materially improve comprehension.
+Analyze the provided markdown blog/article and determine whether technical visuals are necessary to improve comprehension.
 
 A visual should only be added if it meaningfully improves understanding of:
 - system architecture,
@@ -26,7 +26,7 @@ Do NOT add visuals for:
 Source Awareness:
 - Prefer visuals that clarify concepts grounded in authoritative technical sources.
 - Do not generate visuals for speculative, weakly supported, or non-authoritative claims.
-- If the content references conflicting or uncertain information, avoid creating misleading diagrams.
+- If the content references conflicting or uncertain information, avoid creating misleading visuals.
 
 Rules:
 - Maximum 2 images total.
@@ -154,7 +154,7 @@ Output Style:
 - no unsupported inference
 
 Goal:
-Produce compact, implementation-relevant knowledge extraction that adds substantial value beyond standard pretrained knowledge.
+Produce compact, implementation-relevant knowledge extraction that adds substantial value beyond standard pretrained knowledge of an LLM.
 """
 
 SCRAPE_URLS_PROMPT = """
@@ -214,7 +214,7 @@ Avoid selecting pages that are:
 - or information likely already represented in pretrained knowledge.
 
 Selection Constraints:
-- Select at most 2 URLs.
+- Select at most 5 URLs.
 - Prefer diversity of information over redundancy.
 - If no URL provides substantial incremental value, return an empty list.
 
@@ -311,6 +311,7 @@ ROUTER_PROMPT = """
     - If need_research=True, generate 3-8 highly relevant search queries and store them inside search_queries(list of string)
     - Queries should maximize information coverage for writing a high-quality blog post.
     - Queries should be scoped and specific(avoid generic queries like just "AI" or "LLM")
+    - Each query should target a distinct information need. Avoid generating multiple queries that would return substantially the same results. 
     - If user asked for "last week/this week/latest", reflect that constraint in the queries.
     - Include searches for:
         - foundational understanding, latest developments, practical examples, comparisons or alternatives, expert opinions or best practices
@@ -332,7 +333,7 @@ Hard requirements:
 Quality bar:
 - Assume the reader is a developer; use correct terminology.
 - Bullets must be actionable: build/compare/measure/verify/debug.
-- Ensure the overall plan includes at least 2 of these somewhere:
+- Ensure the overall plan includes at least 2 of these somewhere, if relevant:
   * minimal code sketch / MWE (set requires_code=True for that section)
   * edge cases / failure modes
   * performance/cost considerations
